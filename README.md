@@ -1,3 +1,3 @@
 # Fajne
-no ogólnie to takie fajne, nie wiem???
+głównie stuff z lekcji ig
 Weronika Lalewicz
