@@ -1,31 +1,35 @@
 
 #include <iostream>
 using namespace std;
-
+//
 struct Ksiegarnia 
 {
-    string tytul;
+    //literki, tekst itp
+	string tytul;
     string autor;
+    //liczby, mniej miejsca
     short rok;
     string wydawnictwo;
+    //przecinki, nie potrzeba więcej
     float cena;
 };
-
+//funkcja co zbiera, ale nie oddaje, gwiazdka-wyciąga wartość ze wskaźnika
 void KsiazkiRok(Ksiegarnia ksiazki1[], short *rok1);
 void KsiazkiCena(Ksiegarnia ksiazki1[], float *cena1);
 void KsiazkiWydawnictwo(Ksiegarnia ksiazki1[], string *wydawnictwo1);
 
 int main()
 {
-    Ksiegarnia ksiazki[ 7 ] =
+    Ksiegarnia ksiazki[ 8 ] =
     {
-        { "Tytul1", "autor1", 1755, "wydawnictwo1", 23.54 },
-        { "Tytul2", "autor2", 1855, "wydawnictwo2", 24.54 },
-        { "Tytul3", "autor1", 2000, "wydawnictwo3", 25.54 },
-        { "Tytul4", "autor2", 1855, "wydawnictwo4", 26.54 },
-        { "Tytul5", "autor1", 1900, "wydawnictwo2", 27.54 },
-        { "Tytul6", "autor2", 1950, "wydawnictwo1", 28.54 },
-        { "Tytul7", "autor3", 2000, "wydawnictwo3", 29.54 },
+        { "Tytul1", "autor1", 1755, "wydawnictwo1", 15.50 },
+        { "Tytul2", "autor2", 1855, "wydawnictwo2", 24.00 },
+        { "Tytul3", "autor1", 2000, "wydawnictwo3", 25.50 },
+        { "Tytul4", "autor2", 1855, "wydawnictwo4", 25.00 },
+        { "Tytul5", "autor1", 1900, "wydawnictwo2", 20.55 },
+        { "Tytul6", "autor2", 1950, "wydawnictwo1", 20.55 },
+        { "Tytul7", "autor3", 2000, "wydawnictwo3", 30.00 },
+        { "Tytul8", "autor3", 2010, "wydawnictwo3", 35.00 },
     };
 
     short wybor, rok;
@@ -34,14 +38,16 @@ int main()
     cout << "Witaj w ksiegarnii"<< endl;
     do{
         cout << "Po jakiej kategorii chcial bys wyszukac ksiazke:\n";
+        // \n sprawia że jest na dole
         cout << "1. Rok wydania \n2. Cena \n3. Wydawnictwo\n0. Wyjscie\n";
         cin >> wybor;
-
+    	//pozwala jakiejkolwiek wartości zmienić dany wybór
         switch (wybor){
         case 1:
             cout << "Podaj od jakiego roku chcesz zobaczyc ksiazki: ";
             cin >> rok;
             cout << "Znalezione ksiazki:\n";
+            //& pobiera adres tutaj "rok"
             KsiazkiRok(ksiazki, &rok);
             break;
         case 2:
@@ -56,6 +62,7 @@ int main()
             cout << "Znalezione ksiazki:\n";
             KsiazkiWydawnictwo(ksiazki, &wydawnictwo);
             break;
+            //jak nie ma deklaracji
         default:
             break;
         }
@@ -68,7 +75,7 @@ int main()
 
 void KsiazkiRok(Ksiegarnia ksiazki1[], short *rok1){
     bool checkRok = false;
-    for( short i = 0; i < 7; i++ ) {
+    for( short i = 0; i < 8; i++ ) {
         if(ksiazki1[i].rok >= *rok1){
             cout << "Tytul:" << ksiazki1[i].tytul;
             cout << "\tAutor:" << ksiazki1[i].autor;
@@ -85,7 +92,7 @@ void KsiazkiRok(Ksiegarnia ksiazki1[], short *rok1){
 
 void KsiazkiCena(Ksiegarnia ksiazki1[], float *cena1){
     bool checkCena = false;
-    for( short i = 0; i < 7; i++ ) {
+    for( short i = 0; i < 8; i++ ) {
         if(ksiazki1[i].cena >= *cena1){
             cout << "Tytul:" << ksiazki1[i].tytul;
             cout << "\tAutor:" << ksiazki1[i].autor;
@@ -102,7 +109,7 @@ void KsiazkiCena(Ksiegarnia ksiazki1[], float *cena1){
 
 void KsiazkiWydawnictwo(Ksiegarnia ksiazki1[], string *wydawnictwo1){
     bool checkWydawnictwo;
-    for( short i = 0; i < 7; i++ ) {
+    for( short i = 0; i < 8; i++ ) {
         if(ksiazki1[i].wydawnictwo == *wydawnictwo1){
             cout << "Tytul:" << ksiazki1[i].tytul;
             cout << "\tAutor:" << ksiazki1[i].autor;
