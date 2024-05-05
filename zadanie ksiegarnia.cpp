@@ -4,7 +4,7 @@ using namespace std;
 struct Ksiegarnia 
 {
     //literki, tekst itp
-	string tytul;
+    string tytul;
     string autor;
     //liczby, mniej miejsca zajmuje
     short rok;
@@ -68,13 +68,12 @@ int main()
         }
         cout << endl << endl;
     }while(wybor != 0);
-	//!różny niż zero, while musi być bo inaczej nie chce działać, wybór musi być różny od zera (1-3), inaczej nie działa
-	//kontunuuj pętlę do póki użytkownik nie postanowi wyjść za pomocą wpisania 0
+	//!różny niż zero, kontunuuj pętlę do póki użytkownik nie postanowi wyjść za pomocą wpisania 0
     return(0);
 }
 //ksiazki1-tablica pusta, bo zbiera info od nas, wskaźnik pobiera
-void KsiazkiRok(Ksiegarnia ksiazki1[], short *rok1){
-    bool checkRok = false; //sprawdza czy rok dobry, nie true bo wtedy nie wyświetli "brak ksiazki"
+void KsiazkiRok(Ksiegarnia ksiazki1[], short *rok1){ //rok1 podny przez uży
+    bool checkRok = false; //zakladamy że żadnej książce jeszcze nie udało się spełnic kryteriów
     for( short i = 0; i < 8; i++ ) { //i to któryś rok który wybierzemy
         if(ksiazki1[i].rok >= *rok1){ //jesli wartosc ktorą podamy będzie większa lub równa danej dacie to wyświetli resztę danych w odpowiedniej kolejności
             cout << "Tytul:" << ksiazki1[i].tytul;
@@ -108,7 +107,7 @@ void KsiazkiCena(Ksiegarnia ksiazki1[], float *cena1){
 }
 
 void KsiazkiWydawnictwo(Ksiegarnia ksiazki1[], string *wydawnictwo1){
-    bool checkWydawnictwo;
+    bool checkWydawnictwo = false; 
     for( short i = 0; i < 8; i++ ) {
         if(ksiazki1[i].wydawnictwo == *wydawnictwo1){
             cout << "Tytul:" << ksiazki1[i].tytul;
