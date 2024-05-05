@@ -8,10 +8,10 @@ int main()
     int liczby[45];
     short szukana;
     short index = 0;
-
+//kolejny element znalezionej liczby, jak mam dwie 15 to 2
     cout << "Jaka liczbe poszukujesz: ";
     cin >> szukana;
-
+//wykona się i raz (ilosc petli) będzie równe szukanej to tablica będzie dodawać index które będzie ozaczone i, numer petli ten sam co pozycja
     for(int i=0; i< sizeof(tab); i++){
         if(tab[i] == szukana){
             liczby[index] = i;
