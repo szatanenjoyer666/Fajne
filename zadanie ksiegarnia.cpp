@@ -35,7 +35,7 @@ int main()
     float cena;
     string wydawnictwo;
     cout << "Witaj w ksiegarnii"<< endl;
-    do{
+	do{ //petla
         cout << "Po jakiej kategorii chcial bys wyszukac ksiazke:\n";
         // \n sprawia że jest na dole
         cout << "1. Rok wydania \n2. Cena \n3. Wydawnictwo\n0. Wyjscie\n";
@@ -69,6 +69,7 @@ int main()
         cout << endl << endl;
     }while(wybor != 0);
 	//!różny niż zero, while musi być bo inaczej nie chce działać, wybór musi być różny od zera (1-3), inaczej nie działa
+	//kontunuuj pętlę do póki użytkownik nie postanowi wyjść za pomocą wpisania 0
     return(0);
 }
 //ksiazki1-tablica pusta, bo zbiera info od nas, wskaźnik pobiera
