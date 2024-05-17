@@ -2,15 +2,15 @@
 
 using namespace std;
 
-void rozklad(int n) {
+void rozklad(int liczba) {
     int k = 2; 
 
-    while (n > 1) {
-        while (n % k == 0) {
+    while (liczba > 1) {
+        while (liczba % k == 0) { //rozklad
             cout << k << " ";
-            n = n / k;
+            liczba = liczba / k;  
         }
-        k = k + 1;
+        k = k + 1; 
     }
 
     cout << endl;
