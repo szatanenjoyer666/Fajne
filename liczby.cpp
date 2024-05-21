@@ -8,9 +8,9 @@ void rozklad(int liczba) {
     while (liczba > 1) {
         while (liczba % k == 0) { //rozklad
             cout << k << " ";
-            liczba = liczba / k;  
+            liczba = liczba / k;  //warunek spelniony
         }
-        k = k + 1; 
+        k = k + 1; //jak nie moze sie wykonac, jesli liczba % to nie 0
     }
 
     cout << endl;
