@@ -6,9 +6,9 @@ void rozklad(int l) {
     int k = 2; 
 
     while (l > 1) {
-        while (l % k == 0) { //rozklad
+        while (l % k == 0) { //rozklad, jak tak to wypis, 
             cout << k << " ";
-            l = l / k;  //warunek spelniony
+            l = l / k;  //warunek spelniony, leci do while i jak nie to +
         }
         k = k + 1; //jak nie moze sie wykonac, jesli liczba % to nie 0
     }
