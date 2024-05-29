@@ -4,8 +4,8 @@ using namespace std;
 
 int main( )
 {
-  int n, lp, p, d;
-  bool t;
+  int n, lp, p, d; //liczby cał
+  bool t; //zmienna prawda
 
   cout << "Ile liczb pierwszych chcesz wyswietlic: ";
   cin >> n;
