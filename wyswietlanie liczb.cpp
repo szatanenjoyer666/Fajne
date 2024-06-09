@@ -12,9 +12,9 @@ int main( )
   lp = 0;
   p  = 2;
   cout << "Liczby pierwsze: ";
-  while( lp < n )
+  while( lp < n ) //pen gen lp
   {
-    t = true;
+    t = true; //przyp zmien, jak wh
     for( d = 2; d < p; d++ ){
       if( p % d == 0 )
       {
