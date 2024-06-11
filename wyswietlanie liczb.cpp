@@ -27,7 +27,7 @@ int main( )
         cout << p << ", ";
         lp++;
     }
-    p++;
+    p++; //inkre
   }
   cout << endl;
   return 0;
